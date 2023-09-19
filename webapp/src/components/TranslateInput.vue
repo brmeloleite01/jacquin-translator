@@ -31,11 +31,15 @@ export default {
     methods: {
     async translate(){
         this.loading = true
-           const {data} = await axios.post('http://localhost:3333/translation', { text: this.textToTranslate})
+           const {data} = await axios.post('https://southamerica-east1-nodebr-demo-test.cloudfunctions.net/api/translation', { text: this.textToTranslate})
            this.$emit('translationResult', data.resultText)
            this.loading = false
         }
+    },
+    mounted(){
+        console.log('https://southamerica-east1-nodebr-demo-test.cloudfunctions.net/api/translation')
     }
+
 }
 </script>
 <style>

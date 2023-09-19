@@ -46,7 +46,7 @@ export function translate(request: TranslationRequest) : TranslationResult  {
         resultText
     }
 
-   // firestore.getInstance().collection("translations").add({ ...result, date: firestore.getInstance.Timestamp.fromDate(new Date())})
+    //firestore.instance().collection("translations").add({ ...result, date: firestore.instance.Timestamp.fromDate(new Date())})
 
     return result
 }

@@ -4,7 +4,4 @@ admin.initializeApp({
   credential: admin.credential.cert("./service-account.json")
 })
 
-export default {
-    getInstance: admin.firestore,
-    
-}
+export default {instance : admin.firestore}
